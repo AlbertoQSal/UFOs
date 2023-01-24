@@ -13,15 +13,15 @@
     />
     <link rel="stylesheet" href="static/css/style.css">
 </head>
-<body>
+<body class="bg-dark">
     
     <div class="wrapper">
-        <nav class="navbar navbar-expand-ig"> <!--Adding the navigation bar-->
+        <nav class="navbar navbar-dark bg-dark navbar-expand-ig"> <!--Adding the navigation bar-->
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
     </div>
     <div class="jumbotron"> <!--Adding a jumbotron-->
-        <h1>The Truth Is Out There</h1>
+        <h1 class="display-4">The Truth Is Out There</h1>
     </div>
 
     <div class="container-fluid"> <!--Creating the containers for the article title and the paragraphs-->
@@ -52,23 +52,36 @@
             </div>
         </div>
     </div>
-
-    <div class="container-fluid"> <!--Creating the containers for the filter section and the table-->
+    <!--Creating the containers for the filter section and the table-->
+    <div class="container-fluid"> 
         <div class="row">
             <div class="col-md-3">
-                <form>
+                <form class="bg-dark">
                     <p>Filter Search</p>
                 </form>
 
                 <ul class="list-group">
 
                 </ul>
-                <li class="list-group-item">
+                <li class="list-group-item bg-dark">
                     <label for="date">Enter Date</label>
-                    <input type="text" placeholder="1/10/2010" id="datetime" /> <!--Tyoe of entry will be text, the place holder is an example and the id it's what our JS will look for-->
+                    <input type="text" placeholder="1/10/2010" id="datetime" /> <!--Type of entry will be text, the place holder is an example and the id it's what our JS will look for-->
                 </li>
-                <li class="list-group-item">
-                    <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                <li class="list-group-item bg-dark">
+                    <label for="city">Enter a city</label>
+                    <input tyoe="text" placeholder="roswell" id="city"/>
+                </li>
+                <li class="list-group-item bg-dark">
+                    <label for="state">Enter a State</label>
+                    <input type="text" placeholder="ca" id="state" /> 
+                </li>
+                <li class="list-group-item bg-dark">
+                    <label for="country">Enter a Country</label>
+                    <input type="text" placeholder="us" id="country" /> 
+                </li>
+                <li class="list-group-item bg-dark">
+                    <label for="shape">Enter a Shape</label>
+                    <input type="text" placeholder="circle" id="shape" /> 
                 </li>
             </div>
             <div class="col-md-9">
@@ -89,7 +102,10 @@
             </div>
           </div>
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
     <script src="static/js/app.js"></script>
+
 </body>
 </html>
